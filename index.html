@@ -95,5 +95,37 @@
     <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.57 6.57 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007s-.346.05-.527.247c-.182.198-.691.677-.691 1.654s.707 1.916.807 2.048c.098.133 1.392 2.126 3.372 2.982.471.204.839.326 1.127.418.473.151.903.13 1.243.079.38-.058 1.17-.478 1.335-.94.165-.462.165-.857.115-.94-.05-.083-.182-.148-.38-.247z"/>
   </svg>
 </a>
+<!-- Consultation Popup Modal -->
+<div id="consultModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 100000; align-items: center; justify-content: center; padding: 20px;">
+  <div style="background: #ffffff; width: 100%; max-width: 450px; padding: 30px; border-radius: 12px; position: relative; font-family: sans-serif; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+    
+    <!-- Close Button -->
+    <span id="closeModal" style="position: absolute; top: 15px; right: 20px; font-size: 24px; cursor: pointer; color: #333; font-weight: bold;">&times;</span>
+    
+    <h2 style="margin-top: 0; color: #111111; font-size: 22px; text-align: center;">Book Free Consultation</h2>
+    <p style="color: #666; font-size: 14px; text-align: center; margin-bottom: 20px;">Get customized interior designs & instant quote from WallContrast.</p>
+    
+    <!-- Form -->
+    <form action="https://formspree.io/f/mqakvode" method="POST" style="display: flex; flex-direction: column; gap: 12px;">
+      <input type="text" name="name" placeholder="Your Name" required style="padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; outline: none;">
+      
+      <input type="tel" name="phone" placeholder="Phone Number" required style="padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; outline: none;">
+      
+      <select name="property_type" required style="padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; outline: none; background: #fff;">
+        <option value="" disabled selected>Select Property Type</option>
+        <option value="1BHK / 2BHK">1BHK / 2BHK Flat</option>
+        <option value="3BHK / 4BHK">3BHK / 4BHK Flat</option>
+        <option value="Villa / Independent House">Villa / Independent House</option>
+        <option value="Modular Kitchen Only">Modular Kitchen Only</option>
+        <option value="Commercial / Office">Commercial / Office Space</option>
+      </select>
+      
+      <button type="submit" style="padding: 14px; background-color: #111111; color: #ffffff; border: none; border-radius: 6px; font-weight: bold; font-size: 16px; cursor: pointer; transition: 0.3s; margin-top: 10px;">
+        Submit Request
+      </button>
+    </form>
+
+  </div>
+</div>
 </body>
 </html>
