@@ -96,14 +96,14 @@
   </svg>
 </a>
 <!-- Consultation Popup Modal -->
-<div id="consultModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 100000; align-items: center; justify-content: center; padding: 20px;">
-  <div style="background: #ffffff; width: 100%; max-width: 450px; padding: 30px; border-radius: 12px; position: relative; font-family: sans-serif; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+<div id="consultModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 999999; align-items: center; justify-content: center; padding: 20px;">
+  <div style="background: #ffffff; width: 100%; max-width: 400px; padding: 25px; border-radius: 12px; position: relative; font-family: sans-serif; box-shadow: 0 10px 25px rgba(0,0,0,0.3);">
     
     <!-- Close Button -->
-    <span id="closeModal" style="position: absolute; top: 15px; right: 20px; font-size: 24px; cursor: pointer; color: #333; font-weight: bold;">&times;</span>
+    <span onclick="document.getElementById('consultModal').style.display='none'" style="position: absolute; top: 12px; right: 18px; font-size: 26px; cursor: pointer; color: #333; font-weight: bold;">&times;</span>
     
-    <h2 style="margin-top: 0; color: #111111; font-size: 22px; text-align: center;">Book Free Consultation</h2>
-    <p style="color: #666; font-size: 14px; text-align: center; margin-bottom: 20px;">Get customized interior designs & instant quote from WallContrast.</p>
+    <h3 style="margin: 0 0 8px 0; color: #111111; font-size: 20px; text-align: center;">Book Free Consultation</h3>
+    <p style="color: #666; font-size: 13px; text-align: center; margin-bottom: 20px;">Get customized interior designs & instant quote.</p>
     
     <!-- Form -->
     <form action="https://formspree.io/f/mqakvode" method="POST" style="display: flex; flex-direction: column; gap: 12px;">
@@ -120,12 +120,13 @@
         <option value="Commercial / Office">Commercial / Office Space</option>
       </select>
       
-      <button type="submit" style="padding: 14px; background-color: #111111; color: #ffffff; border: none; border-radius: 6px; font-weight: bold; font-size: 16px; cursor: pointer; transition: 0.3s; margin-top: 10px;">
+      <button type="submit" style="padding: 12px; background-color: #111111; color: #ffffff; border: none; border-radius: 6px; font-weight: bold; font-size: 15px; cursor: pointer; margin-top: 5px;">
         Submit Request
       </button>
     </form>
 
   </div>
 </div>
+
 </body>
 </html>
