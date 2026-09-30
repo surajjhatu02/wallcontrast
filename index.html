@@ -30,7 +30,8 @@
         <a href="#portfolio" class="btn primary">See Our Work</a>
         <a href="#contact" class="btn secondary">Book a Consult</a>
       </div>
-    </div>
+    <a href="javascript:void(0)" onclick="document.getElementById('consultModal').style.display='flex'" class="btn secondary">Book a Consult</a>
+
   </section>
 
   <!-- Services / Styles -->
@@ -123,5 +124,53 @@
     </form>
   </div>
 </div>
+<!-- Consultation Popup Modal -->
+<div id="consultModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); backdrop-filter: blur(4px); z-index: 999999; align-items: center; justify-content: center; padding: 15px; box-sizing: border-box;">
+  
+  <div style="background: #ffffff; width: 100%; max-width: 400px; padding: 30px 25px; border-radius: 16px; position: relative; font-family: sans-serif; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+    
+    <!-- Close Button -->
+    <span onclick="document.getElementById('consultModal').style.display='none'" style="position: absolute; top: 15px; right: 20px; font-size: 26px; cursor: pointer; color: #888; font-weight: bold;">&times;</span>
+    
+    <!-- Form Title -->
+    <div style="text-align: center; margin-bottom: 20px;">
+      <h3 style="margin: 0 0 6px 0; color: #111; font-size: 22px;">Book Consultation</h3>
+      <p style="margin: 0; color: #666; font-size: 13px;">Design your dream space with WallContrast.</p>
+    </div>
+    
+    <!-- Form Fields -->
+    <form action="https://formspree.io/f/mqakvode" method="POST" style="display: flex; flex-direction: column; gap: 14px;">
+      
+      <div>
+        <label style="display: block; font-size: 12px; font-weight: 600; color: #333; margin-bottom: 4px;">NAME</label>
+        <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; outline: none; box-sizing: border-box; background: #fafafa;">
+      </div>
+
+      <div>
+        <label style="display: block; font-size: 12px; font-weight: 600; color: #333; margin-bottom: 4px;">PHONE NUMBER</label>
+        <input type="tel" name="phone" placeholder="+91 98765 43210" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; outline: none; box-sizing: border-box; background: #fafafa;">
+      </div>
+
+      <div>
+        <label style="display: block; font-size: 12px; font-weight: 600; color: #333; margin-bottom: 4px;">PROPERTY TYPE</label>
+        <select name="property_type" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; outline: none; box-sizing: border-box; background: #fafafa; color: #333;">
+          <option value="" disabled selected>Select option...</option>
+          <option value="1BHK / 2BHK Apartment">1BHK / 2BHK Apartment</option>
+          <option value="3BHK / 4BHK Apartment">3BHK / 4BHK Apartment</option>
+          <option value="Villa / Independent House">Villa / Independent House</option>
+          <option value="Modular Kitchen Only">Modular Kitchen Only</option>
+          <option value="Commercial Space">Commercial / Office Space</option>
+        </select>
+      </div>
+
+      <button type="submit" style="width: 100%; padding: 14px; background-color: #111111; color: #ffffff; border: none; border-radius: 8px; font-weight: 600; font-size: 15px; cursor: pointer; margin-top: 10px;">
+        Request Free Call
+      </button>
+
+    </form>
+  </div>
+
+</div>
+
 </body>
 </html>
